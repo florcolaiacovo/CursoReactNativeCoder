@@ -24,11 +24,6 @@ const CategoriesItem = ({item, onSelected}) => {
         <Image 
           style={styles.imgItem}
           source={{uri: item.img,}}/>
-
-        <Button 
-          title="+ info"
-          onPress={() => onSelected(item)}
-          />  
         
         {/*<Image 
           style={styles.imgItem}

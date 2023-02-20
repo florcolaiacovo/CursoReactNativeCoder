@@ -7,8 +7,15 @@ export const PRODUCTOS = [
         price: 5000
     },
     {
-        id: "2",
-        category: "2",
+        id: '2',
+        category: '2',
+        title: "Curso de juegos para la primera infancia",
+        description: "Te enseñaremos como estimular a tu bebé para que desarrolle sus habilidades motoras gruesas y finas desde su nacimiento hasta los 2 años de edad",
+        price: 6500
+    },
+    {
+        id: '2',
+        category: '2',
         title: "Curso de juegos para la primera infancia",
         description: "Te enseñaremos como estimular a tu bebé para que desarrolle sus habilidades motoras gruesas y finas desde su nacimiento hasta los 2 años de edad",
         price: 6500

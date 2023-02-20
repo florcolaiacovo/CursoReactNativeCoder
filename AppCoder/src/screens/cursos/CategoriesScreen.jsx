@@ -14,17 +14,24 @@ import CategoriesItem from "../../components/CategoriesItem";
 
 
 const CategoriesScreen = ( {navigation}) => {
-
-const seleccionarCategoria = (item) => {
-  navigation.navigate("Todos los cursos"), {
-    categoryId: item.id,
-    title: item.title,
+  //funcion para navegar a los cursos y productos
+  // luego lo asignamos a nuestra funcion renderCategoriesItem
+  const seleccionarCategoria = (item) => {
+    navigation.navigate("Productos", 
+    {/*{
+      categoryId: item.id,
+      title: item.title,
+    }*/})
   }
-}
 
-const renderCategoriesItem = ({item}) => (
-  <CategoriesItem item={item} onSelected={()=> seleccionarCategoria()}/>
-)
+  //funcion que define lo que va a rendear el FlatList en la pantalla principal
+  const renderCategoriesItem = ({item}) => (
+    <View>
+      <CategoriesItem 
+        item={item} 
+        onSelected={() => seleccionarCategoria()}/>
+    </View>
+  )
 
   return (
     <View>
@@ -37,7 +44,7 @@ const renderCategoriesItem = ({item}) => (
         renderItem={renderCategoriesItem}
         keyExtractor= {item => item.id}
       />
-      {/*<Button title="Cursos" onPress={() => navigation.navigate("Todos los cursos")}/>*/}
+      {/*<Button title="Cursos" onPress={() => navigation.navigate("Productos")}/>*/}
     </View>
   );
 };

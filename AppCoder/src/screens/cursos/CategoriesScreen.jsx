@@ -5,10 +5,8 @@ import {
   FlatList } 
     from "react-native";
 import React from "react";
-
 //data
 import { CATEGORIAS } from "../../data/categories";
-
 //componente
 import CategoriesItem from "../../components/CategoriesItem";
 
@@ -16,12 +14,11 @@ import CategoriesItem from "../../components/CategoriesItem";
 const CategoriesScreen = ( {navigation}) => {
   //funcion para navegar a los cursos y productos
   // luego lo asignamos a nuestra funcion renderCategoriesItem
-  const seleccionarCategoria = (item) => {
+  const seleccionarCategoria = item => {
     navigation.navigate("Productos", 
-    {/*{
-      categoryId: item.id,
+    { categoryId: item.id,
       title: item.title,
-    }*/})
+    })
   }
 
   //funcion que define lo que va a rendear el FlatList en la pantalla principal
@@ -29,7 +26,7 @@ const CategoriesScreen = ( {navigation}) => {
     <View>
       <CategoriesItem 
         item={item} 
-        onSelected={() => seleccionarCategoria()}/>
+        onSelected={seleccionarCategoria}/>
     </View>
   )
 
@@ -44,7 +41,6 @@ const CategoriesScreen = ( {navigation}) => {
         renderItem={renderCategoriesItem}
         keyExtractor= {item => item.id}
       />
-      {/*<Button title="Cursos" onPress={() => navigation.navigate("Productos")}/>*/}
     </View>
   );
 };

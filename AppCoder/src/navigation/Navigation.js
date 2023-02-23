@@ -2,8 +2,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 //screens
-import CursoDeMotricidad from '../screens/cursos/CursoDeMotricidad'
-import CursoPAyRCP from '../screens/cursos/CursoPayRcp'
+import DetallesScreen from '../screens/cursos/DetallesScreen'
 import ProductosScreen from '../screens/cursos/ProductosScreen.jsx'
 import CategoriesScreen from '../screens/cursos/CategoriesScreen';
 
@@ -23,8 +22,7 @@ function MyTabs() {
                     fontWeight: "bold"
                 }
             }}
-        >
-            
+            >       
             <Stack.Screen 
                 name="Categorías" 
                 component={CategoriesScreen}
@@ -32,20 +30,19 @@ function MyTabs() {
                     title: "Inicio"
                 }} />
             <Stack.Screen 
-                name="Motricidad" 
-                component={CursoDeMotricidad}
-                options={{
-                    title: "Curso de motricidad"
-                }}
-                />
-            <Stack.Screen name="Rcp" component={CursoPAyRCP} />
-            <Stack.Screen 
                 name="Productos" 
                 component={ProductosScreen} 
-                options={({ route }) => ({
+                options={ ({ route }) => ({
                     title: route.params.title,
                     })}
-            /> 
+                    /> 
+            <Stack.Screen 
+                name="Detalles" 
+                component={DetallesScreen}
+                options={ ({ route }) => ({
+                    title: route.params.name,
+                })}
+                />
         </Stack.Navigator>
     )
 }

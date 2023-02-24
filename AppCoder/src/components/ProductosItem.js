@@ -10,16 +10,19 @@ import React from 'react'
 
 const ProductosItem = ({item, onSelected}) => {
   return (
-    <TouchableOpacity
 
+    <TouchableOpacity
       onPress={() => onSelected(item)}>
-      <View 
-        style={styles.cajaProducto}>
-        <Image 
-          style={{width: '100%', height:'50%'}}
-          source={{uri:  "https://reactjs.org/logo-og.png"
-          }}/>
-        <View>  
+
+      <View style={styles.cajaProducto}>
+        <View>
+          <Image 
+            style={{width: 155, height: 100}}
+            source={{uri:  "https://reactjs.org/logo-og.png"
+            }}/>
+        </View>
+      
+        <View style={styles.textoItem}>  
           <Text>{item.title}</Text>
           <Text>$ {item.price} ARS</Text>
         </View>
@@ -34,9 +37,11 @@ export default ProductosItem
 const styles = StyleSheet.create({
     cajaProducto: {
       margin: 15,
-      height: '100%',
       width: '80%',
+      height: '150%',
       paddingVertical: 7,
-
+    },
+    textoItem: {
+      height: 300,
     }
 })

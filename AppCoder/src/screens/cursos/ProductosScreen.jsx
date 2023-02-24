@@ -26,7 +26,7 @@ const ProductosScreen = ({navigation, route}) => {
   
   //funcion que define lo que va a renderear el Flatlist
   const renderProductsItem = ({item}) => (
-    <View>
+    <View style= { styles.contenedorProducto}>
       <ProductosItem 
         item={item}
         onSelected={handleSelectedProducts}
@@ -52,6 +52,13 @@ export default ProductosScreen;
 
 const styles = StyleSheet.create({
   productosScreenCaja: {
-    height: '200%',
+    flex: 1,
+    margin: 15
+
+  },
+  contenedorProducto: {
+    width: '50%',
+    flex:1
+
   }
 });

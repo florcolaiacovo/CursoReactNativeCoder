@@ -1252,7 +1252,7 @@
     semver "7.3.2"
     tempy "0.3.0"
 
-"@expo/json-file@^8.2.35":
+"@expo/json-file@^8.2.35", "@expo/json-file@^8.2.37":
   version "8.2.37"
   resolved "https://registry.npmjs.org/@expo/json-file/-/json-file-8.2.37.tgz"
   integrity sha512-YaH6rVg11JoTS2P6LsW7ybS2CULjf40AbnAHw2F1eDPuheprNjARZMnyHFPkKv7GuxCy+B9GPcbOKgc4cgA80Q==
@@ -1293,11 +1293,11 @@
     exec-async "^2.2.0"
 
 "@expo/package-manager@~0.0.53":
-  version "0.0.57"
-  resolved "https://registry.npmjs.org/@expo/package-manager/-/package-manager-0.0.57.tgz"
-  integrity sha512-Y4RpSL9EqaPF+Vd2GrK6r7Xx7Dv0Xdq3AGAD9C0KwV21WqP/scj/dpjxFY+ABwmdhNsFzYXb8fmDyh4tiKenPQ==
+  version "0.0.60"
+  resolved "https://registry.npmjs.org/@expo/package-manager/-/package-manager-0.0.60.tgz"
+  integrity sha512-MdV7dpFA4aI8HIW0xsW2DBUem5aFKL8+/v5LXKPZuXmYW02/EXPSp7DBJAwow8ULpa3Q2VlYfb46hWPre3hw4A==
   dependencies:
-    "@expo/json-file" "8.2.36"
+    "@expo/json-file" "^8.2.37"
     "@expo/spawn-async" "^1.5.0"
     ansi-regex "^5.0.0"
     chalk "^4.0.0"
@@ -4788,9 +4788,9 @@ minipass@^3.0.0, minipass@^3.1.1, minipass@3.1.6:
     yallist "^4.0.0"
 
 minipass@^4.0.0:
-  version "4.2.0"
-  resolved "https://registry.npmjs.org/minipass/-/minipass-4.2.0.tgz"
-  integrity sha512-ExlilAIS7zJ2EWUMaVXi14H+FnZ18kr17kFkGemMqBx6jW0m8P6XfqwYVPEG53ENlgsED+alVP9ZxC3JzkK23Q==
+  version "4.2.1"
+  resolved "https://registry.npmjs.org/minipass/-/minipass-4.2.1.tgz"
+  integrity sha512-KS4CHIsDfOZetnT+u6fwxyFADXLamtkPxkGScmmtTW//MlRrImV+LtbmbJpLQ86Hw7km/utbfEfndhGBrfwvlA==
 
 minizlib@^2.1.1:
   version "2.1.2"
@@ -5485,10 +5485,10 @@ react-native-vector-icons@^9.2.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
-react-native@*, react-native@0.70.5:
-  version "0.70.5"
-  resolved "https://registry.npmjs.org/react-native/-/react-native-0.70.5.tgz"
-  integrity sha512-5NZM80LC3L+TIgQX/09yiyy48S73wMgpIgN5cCv3XTMR394+KpDI3rBZGH4aIgWWuwijz31YYVF5504+9n2Zfw==
+react-native@*, react-native@0.70.4:
+  version "0.70.4"
+  resolved "https://registry.npmjs.org/react-native/-/react-native-0.70.4.tgz"
+  integrity sha512-1e4jWotS20AJ/4lGVkZQs2wE0PvCpIRmPQEQ1FyH7wdyuewFFIxbUHqy6vAj1JWVFfAzbDakOQofrIkkHWLqNA==
   dependencies:
     "@jest/create-cache-key-function" "^29.0.3"
     "@react-native-community/cli" "9.2.1"

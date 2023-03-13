@@ -9,14 +9,17 @@ import React from "react";
 //data 
 import { PRODUCTOS } from "../../data/products";
 import ProductosItem from "../../components/ProductosItem";
+import { useDispatch, useSelector } from "react-redux";
 
 
 
 const ProductosScreen = ({navigation, route}) => {
-  //filtro para acceder a los productos por categoría
-  const newProducto = PRODUCTOS.filter (
-    producto => producto.category === route.params.categoryId
-  )
+
+  const categoryProducts = useSelector (state => state.products.filteredProducts)
+
+  const category = useSelector (state => state.categiries.selected)
+
+  const dispatch = useDispatch()
 
   const handleSelectedProducts  = item => {
     navigation.navigate('Detalles',
@@ -39,7 +42,7 @@ const ProductosScreen = ({navigation, route}) => {
       style={styles.productosScreenCaja}>
       <Text>Productos</Text>
       <FlatList 
-        data={newProducto}
+        data={categoryProducts}
         renderItem={renderProductsItem}
         keyExtractor={item => item.id}
         numColumns={2}

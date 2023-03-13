@@ -5,13 +5,18 @@ import {
   FlatList } 
     from "react-native";
 import React from "react";
-//data
-import { CATEGORIAS } from "../../data/categories";
+
 //componente
 import CategoriesItem from "../../components/CategoriesItem";
+import { useSelector } from "react-redux";
+
+
 
 
 const CategoriesScreen = ( {navigation}) => {
+
+  const categories = useSelector(state => state.categories.categories)
+
   //funcion para navegar a los cursos y productos
   // luego lo asignamos a nuestra funcion renderCategoriesItem
   const seleccionarCategoria = item => {
@@ -37,7 +42,7 @@ const CategoriesScreen = ( {navigation}) => {
       En esta aplicación podrás encontrar una gran guía y apoyo para que explotes tu máximo potencial. Espero ser de gran ayuda para el trabajo más importante de tu vida. Queremos lo mejor para la familia hermosa que te aventuraste a formar. Espero que disfrutes de esta app que creé con tanto amor :)
     </Text>
       <FlatList 
-        data={CATEGORIAS}
+        data={categories}
         renderItem={renderCategoriesItem}
         keyExtractor= {item => item.id}
       />
